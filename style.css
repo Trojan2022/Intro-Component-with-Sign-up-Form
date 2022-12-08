@@ -17,8 +17,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95vh;
-    gap: 10px;
+    min-height: 95vh;
+    gap: 40px;
     line-height: 1.5rem;
     font-size: 16px;
 }
@@ -53,23 +53,26 @@
     border-radius: 10px;
     
 }
-.from-textbox{
+input{
     width: 300px;
     padding: 5px;
     outline: none;
     border-radius: 5px;
-    margin: 5px;
+    margin: 10px;
 }
 form{
     padding: 10px;
     margin-top: 10px;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 5px 3px black;
+}
+form div{
+    display: flex;
+    flex-direction: column;
 }
 .btn{
     background-color: var(--green);
@@ -79,4 +82,52 @@ form{
 
 .gg{
     color: var(--red);
+}
+
+.f{
+    position: absolute;
+    top: 13px;
+    right: 25px;
+    display: none;
+}
+
+.error{
+   border: 2px solid var(--red);
+   background: url(images/icon-error.svg) no-repeat;
+   background-position: 95% 50%;
+}
+
+.error-text{
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 50%;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    color: var(--red);
+}
+
+.success{
+    border: 2px solid var(--green);
+}
+
+@media (max-width:925px) {
+.container{
+    flex-direction: column;
+}
+
+.text-con, .form-con, .box-span, form{
+    max-width: 250px;
+}
+.from-textbox {
+    max-width: 220px;
+}
+form{
+    margin-bottom: 20px;
+}
+.container{
+    min-height: 100vh;
+}
+.error-text{
+    margin-left: 40%;
+}
 }
